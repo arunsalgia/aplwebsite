@@ -1,10 +1,10 @@
 import {
-  successColor,
+  //successColor,
   whiteColor,
   grayColor,
   hexToRgb
-} from "assets/jss/material-dashboard-react.js";
-import { red, blue, green, deepOrange, deepPurple } from '@material-ui/core/colors';
+} from "assets/jss/material-dashboard-react";
+import { red, blue, deepOrange } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -33,6 +33,17 @@ const globalStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
   },
+  left: {
+    fontSize: theme.typography.pxToRem(16),
+    fontWeight: theme.typography.fontWeightBold,
+    color: red[900],
+    //align: "right",
+  },
+  right: {
+    fontSize: theme.typography.pxToRem(16),
+    fontWeight: theme.typography.fontWeightBold,
+    color: blue[900]
+  },
   message18: {
     fontSize: theme.typography.pxToRem(18),
     fontWeight: theme.typography.fontWeightBold,
@@ -59,7 +70,9 @@ const globalStyles = makeStyles((theme) => ({
     // color: yellow[900]
   },
   button: {
-    margin: theme.spacing(0, 1, 0),
+    //margin: theme.spacing(0, 1, 0),
+    marginLeft: '10px',
+    marginRight: '10px',
   },
   error:  {
     fontSize: '12px',

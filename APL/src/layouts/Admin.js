@@ -13,14 +13,6 @@ import styles from "assets/jss/material-dashboard-react/layouts/adminStyle.js";
 import bgImage from "assets/img/sidebar-2.jpg";
 // import logo from "assets/img/reactlogo.png";
 import logo from "assets/img/APLLOGO1.JPG";
-import SignUp from "views/Login/SignUp.js";
-import SignIn from "views/Login/SignIn.js";
-import ForgotPassword from "views/Login/ForgotPassword.js";
-import AddGroupMember from "views/Group/AddGroupMember.js"
-import GroupMember from "views/Group/GroupMember.js"
-import NewGroup from "views/Group/NewGroup.js"
-import GroupDetails from "views/Group/GroupDetails.js"
-
 
 let ps;
 
@@ -38,15 +30,6 @@ const switchRoutes = (
       }
       return null;
     })}
-    <Route  path='/admin/addgroupmember' component={AddGroupMember} key="MemberList"/>
-    <Route  path='/admin/membergroup' component={GroupMember} key="MemberList"/>
-    {/* <Route  path='/admin/groupdetails/:groupName' component={GroupDetails} key="MemberList"/> */}
-    <Route  path='/admin/groupdetails' component={GroupDetails} key="MemberList"/>
-    <Route  path='/admin/newgroup' component={NewGroup} key="NewGroup"></Route>
-    <Route  path='/admin/register' component={SignUp} key="NewGroup"></Route>
-    <Route  path='/admin/emailpassword' component={ForgotPassword} key="NewGroup"></Route>
-    <Route  path='/signin' component={SignIn} key="signin"></Route>
-    <Redirect from="/" to="/admin/mygroup" />
   </Switch>
 );
 

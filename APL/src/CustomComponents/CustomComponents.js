@@ -23,7 +23,6 @@ import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import {red, blue, green, deepOrange, yellow} from '@material-ui/core/colors';
 import {validateSpecialCharacters, validateEmail, validateMobile,
   encrypt, decrypt, currentAPLVersion, latestAPLVersion} from "views/functions.js";
-import {setTab} from "CustomComponents/CricDreamTabs.js"
 import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
@@ -392,73 +391,7 @@ export class Copyright extends React.Component {
   }
 }
 
-export function OrigJumpButton(props) {
-  const classes = useStyles();
-  return (
-    <div>
-      <Divider className={classes.divider} />
-      <BlankArea />
-      <Button variant="contained" fullWidth color="primary" align="center"
-        onClick={() => setTab(props.page) }>
-        {props.text}
-      </Button>
-  </div>
-  )
-}
 
-
-export function JumpButton(props) {
-  let myDisabled = false;
-  if (props.disabled) myDisabled = props.disabled;
-  const classes = useStyles();
-  return (
-    <div align="center">
-      {/* <Divider className={classes.divider} /> */}
-      {/* <BlankArea /> */}
-      <Button variant="outlined" size="medium" color="primary"
-        disabled={myDisabled}
-        className={classes.jumpButton}
-        onClick={() => setTab(props.page) }>
-        {props.text}
-      </Button>
-  </div>
-  )
-}
-
-export function JumpButtonFull(props) {
-  let myDisabled = false;
-  if (props.disabled) myDisabled = props.disabled;
-  const classes = useStyles();
-  return (
-    <div align="center">
-      {/* <Divider className={classes.divider} /> */}
-      {/* <BlankArea /> */}
-      <Button variant="outlined" size="medium" color="primary"
-        disabled={myDisabled}
-        className={classes.jumpButtonFull}
-        onClick={() => setTab(props.page) }>
-        {props.text}
-      </Button>
-  </div>
-  )
-}
-
-export function JumpButtonOnly(props) {
-  let myDisabled = false;
-  if (props.disabled) myDisabled = props.disabled;
-  const classes = useStyles();
-  return (
-    <div align="center">
-      {/* <BlankArea /> */}
-      <Button variant="outlined" size="medium" color="primary"
-        disabled={myDisabled}
-        className={classes.jumpButton}
-        onClick={() => setTab(props.page) }>
-        {props.text}
-      </Button>
-  </div>
-  )
-}
 
 export function CricDreamLogo () {
   let mylogo = `${process.env.PUBLIC_URL}/APLLOGO1.ICO`;
